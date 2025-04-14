@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0e31155" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.34.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
+  <bpmn:process id="Process_0w4q4lm" isExecutable="true">
+    <bpmn:task id="Activity_05p4tlf">
+      <bpmn:incoming>Flow_0go8gu0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0909h7w</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:scriptTask id="Activity_0xdboom" name="Activity_0xdboom">
+      <bpmn:extensionElements>
+        <zeebe:script expression="=for&#10;  fruit in [ &#34;apple&#34;, &#34;bananas&#34; ], vegetable in vegetables&#10;return&#10;  { ingredients: [ fruit, vegetable ] }" resultVariable="ingridients" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05uwk1s</bpmn:incoming>
+    </bpmn:scriptTask>
+    <bpmn:boundaryEvent id="Event_0cm8fpe" cancelActivity="false" attachedToRef="Activity_05p4tlf">
+      <bpmn:outgoing>Flow_05uwk1s</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0htonw2">
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">R/P1M</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="Event_10u4zfr">
+      <bpmn:incoming>Flow_0909h7w</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_17qf5re" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_05uwk1s" sourceRef="Event_0cm8fpe" targetRef="Activity_0xdboom" />
+    <bpmn:sequenceFlow id="Flow_0909h7w" sourceRef="Activity_05p4tlf" targetRef="Event_10u4zfr" />
+    <bpmn:sequenceFlow id="Flow_0go8gu0" sourceRef="StartEvent_1" targetRef="Activity_05p4tlf" />
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0go8gu0</bpmn:outgoing>
+    </bpmn:startEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0w4q4lm">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="182" y="232" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05p4tlf_di" bpmnElement="Activity_05p4tlf">
+        <dc:Bounds x="410" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1f9fpe4_di" bpmnElement="Event_10u4zfr">
+        <dc:Bounds x="712" y="232" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0quj1g3_di" bpmnElement="Activity_0xdboom">
+        <dc:Bounds x="550" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0nkfsgk_di" bpmnElement="Event_0cm8fpe">
+        <dc:Bounds x="442" y="192" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0go8gu0_di" bpmnElement="Flow_0go8gu0">
+        <di:waypoint x="218" y="250" />
+        <di:waypoint x="410" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0909h7w_di" bpmnElement="Flow_0909h7w">
+        <di:waypoint x="510" y="250" />
+        <di:waypoint x="712" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05uwk1s_di" bpmnElement="Flow_05uwk1s">
+        <di:waypoint x="460" y="192" />
+        <di:waypoint x="460" y="120" />
+        <di:waypoint x="550" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
