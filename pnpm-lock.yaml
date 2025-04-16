@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@camunda8/sdk':
-        specifier: ^8.6.38
-        version: 8.6.38
+        specifier: ^8.7.0
+        version: 8.7.0
       chalk:
         specifier: ^5.4.1
         version: 5.4.1
@@ -27,8 +27,8 @@ importers:
 
 packages:
 
-  '@camunda8/sdk@8.6.38':
-    resolution: {integrity: sha512-ql8j83bATAPWfcgj3rR8pJvdAPx0DQrtF7c6ONCgt+gmSJ712jLZDsa/HMOFNY5ianDQOBovD+wQ9mOgjHEMag==}
+  '@camunda8/sdk@8.7.0':
+    resolution: {integrity: sha512-G67bCcc579RAUCfTF1nNHdl8AfdYaPmSgWm7qY2Fje3O/qY/WQpMyYZRL/6OSvDCsUj1FahR2IaWQLksSR9gcg==}
 
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
@@ -485,8 +485,8 @@ packages:
     resolution: {integrity: sha512-StEy2osPr28o17bIW776GtwO6+Q+M9zPiZkYfosciUUMYqjhU/ffwRAH0zN2+uvGyUsn8/YICIHRzLbPacpZGw==}
     engines: {node: '>=0.12'}
 
-  protobufjs@7.4.0:
-    resolution: {integrity: sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==}
+  protobufjs@7.5.0:
+    resolution: {integrity: sha512-Z2E/kOY1QjoMlCytmexzYfDm/w5fKAiRwpSzGtdnXW1zC88Z2yXazHHrOtwCzn+7wSxyE8PYM4rvVcMphF9sOA==}
     engines: {node: '>=12.0.0'}
 
   pump@3.0.2:
@@ -635,7 +635,7 @@ packages:
 
 snapshots:
 
-  '@camunda8/sdk@8.6.38':
+  '@camunda8/sdk@8.7.0':
     dependencies:
       '@grpc/grpc-js': 1.12.5
       '@grpc/proto-loader': 0.7.13
@@ -684,7 +684,7 @@ snapshots:
     dependencies:
       lodash.camelcase: 4.3.0
       long: 5.3.1
-      protobufjs: 7.4.0
+      protobufjs: 7.5.0
       yargs: 17.7.2
 
   '@jridgewell/resolve-uri@3.1.2': {}
@@ -1083,7 +1083,7 @@ snapshots:
       err-code: 1.1.2
       retry: 0.10.1
 
-  protobufjs@7.4.0:
+  protobufjs@7.5.0:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
       '@protobufjs/base64': 1.1.2

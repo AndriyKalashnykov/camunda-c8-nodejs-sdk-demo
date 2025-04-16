@@ -2,13 +2,13 @@
   "name": "c8-sdk-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index-find-run-execute.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --loader ts-node/esm src/index.ts"
+    "start": "node --loader ts-node/esm src/index-find-run-execute.ts"
   },
   "keywords": [],
-  "author": "josh.wulf@camunda.com",
+  "author": "andriy.kalashnykov@gmail.com",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
@@ -16,7 +16,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@camunda8/sdk": "^8.6.38",
+    "@camunda8/sdk": "^8.7.0",
     "chalk": "^5.4.1",
     "dotenv": "^16.5.0"
   }
